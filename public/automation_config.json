@@ -59,14 +59,6 @@
 			"priority": 50
 		},
 		{
-			"name": "Akvárium nagy",
-			"type": "temp",
-			"node": 11,
-			"sensor": "A",
-			"priority": 100
-		},
-
-		{
 			"name": "Kazánház",
 			"type": "temp",
 			"node": 15,

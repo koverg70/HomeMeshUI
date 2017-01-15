@@ -203,7 +203,7 @@ function addRedirect(devServer) {
     // console.log('Proxy end...');
   })
 
-  devServer.use('/trends', function (req, res) {
+  devServer.use('/trend_data', function (req, res) {
     var url = 'http://10.0.0.7/autom_data' + req.url
     var r = null
 
@@ -218,6 +218,11 @@ function addRedirect(devServer) {
     req.pipe(r).pipe(res)
     // console.log('Proxy end...');
 
+  })
+
+  devServer.use('/*', function (req, res, next) {
+    req.url = 'index.html'
+    next()
   })
 }
 

@@ -35,12 +35,14 @@ const ScheduleHour = (props) => {
     return <td>
         <div>
           <table width='100%'>
+          <tbody>
           <tr>
           <td><input onChange={() => props.checkItem(props.start+0, props.params.node)} type="checkbox" checked={props.check[props.start+0] !== 0}/></td>
           <td><input onChange={() => props.checkItem(props.start+1, props.params.node)} type="checkbox" checked={props.check[props.start+1] !== 0}/></td>
           <td><input onChange={() => props.checkItem(props.start+2, props.params.node)} type="checkbox" checked={props.check[props.start+2] !== 0}/></td>
           <td><input onChange={() => props.checkItem(props.start+3, props.params.node)} type="checkbox" checked={props.check[props.start+3] !== 0}/></td>
           </tr>
+          </tbody>
           </table>
         </div>
     </td>

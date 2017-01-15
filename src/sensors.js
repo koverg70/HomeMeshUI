@@ -94,8 +94,8 @@ class Sensors extends React.Component {
 }
 
 Sensors.propTypes = {
-    sensors     : React.PropTypes.object.isRequired,
-    settings    : React.PropTypes.object.isRequired,
+    sensors     : React.PropTypes.object,
+    settings    : React.PropTypes.object,
     loadValues : React.PropTypes.func.isRequired,
 }
 
