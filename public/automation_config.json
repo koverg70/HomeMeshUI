@@ -1,0 +1,98 @@
+{
+	"sensors": [
+		{
+			"name": "Nappali",
+			"type": "temp",
+			"node": 14,
+			"sensor": "A",
+			"priority": 1
+		},
+		{
+			"name": "Nappali",
+			"type": "humi",
+			"node": 14,
+			"sensor": "X",
+			"priority": 1
+		},
+
+		{
+			"name": "Fürdőszoba",
+			"type": "temp",
+			"node": 1,
+			"sensor": "A",
+			"priority": 10
+		},
+		{
+			"name": "Fürdőszoba",
+			"type": "humi",
+			"node": 1,
+			"sensor": "X",
+			"priority": 10
+		},
+
+		{
+			"name": "Nappali belső",
+			"type": "temp",
+			"node": 11,
+			"sensor": "A",
+			"priority": 50
+		},
+		{
+			"name": "Nappali belső",
+			"type": "humi",
+			"node": 11,
+			"sensor": "X",
+			"priority": 50
+		},
+		{
+			"name": "Nappali padló",
+			"type": "temp",
+			"node": 11,
+			"sensor": "B",
+			"priority": 50
+		},
+		{
+			"name": "Akvárium",
+			"type": "temp",
+			"node": 11,
+			"sensor": "C",
+			"priority": 50
+		},
+		{
+			"name": "Akvárium nagy",
+			"type": "temp",
+			"node": 11,
+			"sensor": "A",
+			"priority": 100
+		},
+
+		{
+			"name": "Kazánház",
+			"type": "temp",
+			"node": 15,
+			"sensor": "A",
+			"priority": 200
+		},
+		{
+			"name": "Kazánház",
+			"type": "humi",
+			"node": 15,
+			"sensor": "X",
+			"priority": 200
+		}
+	],
+
+	"schedules": [
+		{
+			"name": "Kazán",
+			"type": "schedule",
+			"node": 15
+		},
+		{
+			"name": "Fürdőszoba",
+			"type": "schedule",
+			"node": 1
+		}
+	]
+
+}
