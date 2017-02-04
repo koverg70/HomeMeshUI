@@ -58,7 +58,7 @@ export class TrendCurves extends React.Component {
             </ButtonGroup>
           </ButtonToolbar>
           <Col>Trendgörbék ({this.state.width} x {this.state.height})</Col>
-          <LineChart width={this.state.width} height={this.state.height-300} data={this.state.data}
+          <LineChart width={this.state.width} height={Math.max(400, this.state.height-200)} data={this.state.data}
                 margin={{top: 5, right: 30, left: 20, bottom: 5}}>
            <XAxis dataKey="name"/>
            <YAxis yAxisId="left" orientation="left" domain={['dataMin-1', 'dataMax+1']}/>
