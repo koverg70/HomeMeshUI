@@ -61,18 +61,21 @@ export class TrendCurves extends React.Component {
           <LineChart width={this.state.width} height={Math.max(400, this.state.height-200)} data={this.state.data}
                 margin={{top: 5, right: 30, left: 20, bottom: 5}}>
            <XAxis dataKey="name"/>
-           <YAxis yAxisId="left" orientation="left" domain={['dataMin-1', 'dataMax+1']}/>
-           <YAxis yAxisId="right" orientation="right" domain={['dataMin-1', 'dataMax+1']}/>
+           <YAxis yAxisId="left" orientation="left" domain={[19, 31]} minTickGap={1} />
+           <YAxis yAxisId="right" orientation="right" domain={[0, 100]}/>
            <CartesianGrid strokeDasharray="3 3"/>
            <Tooltip/>
            <Legend verticalAlign="top" height={36}/>
-           <Line yAxisId="left" isAnimationActive={false} dot={false} type="linear" dataKey="1A" stroke="#8884d8" />
-           <Line yAxisId="left" isAnimationActive={false} dot={false} type="linear" dataKey="11A" stroke="#82ca9d" />
-           <Line yAxisId="left" isAnimationActive={false} dot={false} type="linear" dataKey="14A" stroke="#000000" />
+           <Line yAxisId="right" isAnimationActive={false} strokeWidth={3} dot={false} type="linear" dataKey="1X" name='Fürdőszoba pára' stroke="#EFDFC5" />
+           <Line yAxisId="right" isAnimationActive={false} strokeWidth={3} dot={false} type="linear" dataKey="11X" name='Napplai belső pára' stroke="#EFEABD" />
+           <Line yAxisId="right" isAnimationActive={false} strokeWidth={3} dot={false} type="linear" dataKey="14X" name='Nappali pára'stroke="#EAEAC2" />
+           <Line yAxisId="right" isAnimationActive={false} strokeWidth={3} dot={false} type="linear" dataKey="15X" name='Kazánház pára'stroke="#EFEFE0" />
 
-           <Line yAxisId="right" isAnimationActive={false} dot={false} type="linear" dataKey="1X" stroke="#ff84d8" />
-           <Line yAxisId="right" isAnimationActive={false} dot={false} type="linear" dataKey="11X" stroke="#ffca9d" />
-           <Line yAxisId="right" isAnimationActive={false} dot={false} type="linear" dataKey="14X" stroke="#ff0000" />
+           <Line yAxisId="left" isAnimationActive={false} strokeWidth={2} dot={false} type="linear" dataKey="1A" name='Fürdőszoba hő' stroke="#00A000" />
+           <Line yAxisId="left" isAnimationActive={false} strokeWidth={2} dot={false} type="linear" dataKey="11A" name='Napplai belső hő' stroke="#202020" />
+           <Line yAxisId="left" isAnimationActive={false} strokeWidth={2} dot={false} type="linear" dataKey="11B" name='Napplai padló hő' stroke="#802020" />
+           <Line yAxisId="left" isAnimationActive={false} strokeWidth={2} dot={false} type="linear" dataKey="14A" name='Nappali hő' stroke="#000000" />
+           <Line yAxisId="left" isAnimationActive={false} strokeWidth={2} dot={false} type="linear" dataKey="15A" name='Kazánház hő' stroke="#8080A0" />
           </LineChart>
         </Row>
     );
